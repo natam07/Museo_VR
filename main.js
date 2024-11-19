@@ -213,13 +213,6 @@ line.scale.z = 20; // Longitud del rayo
 line.add(camera);
 controller.add(line)
 
-const textureMap = {
-    'Pintura Hombre de vitruvio': 'Pinturas/Vertical/Textos/Hombre de vitruvio.png',
-    'Pintura2': 'ruta/a/imagen2.png',
-    'Pintura3': 'ruta/a/imagen3.png',
-    // Agrega más texturas según sea necesario
-};
-
 // Evento de selección
 controller.addEventListener('selectstart', () => {
     // Usar la posición y orientación del controlador
