@@ -210,7 +210,8 @@ const lineMaterial = new THREE.LineBasicMaterial({ color: 0xff0000 });
 const line = new THREE.Line(lineGeometry, lineMaterial);
 line.name = 'line';
 line.scale.z = 20; // Longitud del rayo
-camera.add(line);
+line.add(camera);
+controller.add(line)
 
 const textureMap = {
     'Pintura Hombre de vitruvio': 'Pinturas/Vertical/Textos/Hombre de vitruvio.png',
