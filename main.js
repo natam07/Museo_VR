@@ -265,7 +265,7 @@ controller.addEventListener('selectstart', () => {
 
                 'Pintura La lechera':'Pinturas[1]/Pinturas/Vertical/Textos/La lechera.png',
                 'Pintura Las meninas':'Pinturas[1]/Pinturas/Vertical/Textos/Las meninas.png',
-                'Pintura Magdalena penitente de la lamparilla':'¿Pinturas[1]/Pinturas/Vertical/Textos/Magdalena Penitente de la lamparilla.png',
+                'Pintura Magdalena penitente de la lamparilla':'Pinturas[1]/Pinturas/Vertical/Textos/Magdalena Penitente de la lamparilla.png',
                 'Pintura Monalisa':'Pinturas[1]/Pinturas/Vertical/Textos/Monalisa.png',
 
                 'Pintura Mujeres en la ventana':'Pinturas[1]/Pinturas/Vertical/Textos/las mujeres en la ventana.png',
