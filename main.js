@@ -183,11 +183,11 @@ scene.add(player);
 let isPressed = false;
 let speed = 0.05; 
 
-controller.addEventListener('squeezestart', () => {
+controller.addEventListener('selectstart', () => {
     isPressed = true;
 });
 
-controller.addEventListener('squeezeend', () => {
+controller.addEventListener('selectend', () => {
     isPressed = false;
 });
 
