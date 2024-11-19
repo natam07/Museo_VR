@@ -176,29 +176,38 @@ const materialS = {
 
 loadFBXModel('Museo.fbx', { x: 1, y: 1, z: 1 }, { x: 0, y: 0, z: 0 }, { x: 0, y: 0, z: 0 }, materialS);
 
-// Grupo para representar al jugador
 const player = new THREE.Group();
 player.add(camera);
 scene.add(player);
 
-// Evento para detectar movimiento del controlador
+let isPressed = false;
+let speed = 0.05; 
+
 controller.addEventListener('squeezestart', () => {
-    // Simula movimiento hacia adelante
-    const direction = new THREE.Vector3();
-    camera.getWorldDirection(direction);
-    player.position.addScaledVector(direction, 0.5); // Avanza 0.5 unidades
+    isPressed = true;
 });
 
+controller.addEventListener('squeezeend', () => {
+    isPressed = false;
+});
+
+function update() {
+    if (isPressed) {
+        const direction = new THREE.Vector3();
+        camera.getWorldDirection(direction);
+        const movement = direction.multiplyScalar(speed);
+        player.position.add(movement);
+    }
+    requestAnimationFrame(update);
+}
+
+update();
 function animate() {
-
-    controls.update();
-
     renderer.setAnimationLoop(() => {
         renderer.render(scene, camera);
     });
 }
-
-renderer.setAnimationLoop(animate);
+animate();
 
 //Funciones para que la información salga 
 const raycaster = new THREE.Raycaster();
@@ -211,6 +220,13 @@ const line = new THREE.Line(lineGeometry, lineMaterial);
 line.name = 'line';
 line.scale.z = 20; // Longitud del rayo
 controller.add(line);
+
+const textureMap = {
+    'Pintura Hombre de vitruvio': 'Pinturas/Vertical/Textos/Hombre de vitruvio.png',
+    'Pintura2': 'ruta/a/imagen2.png',
+    'Pintura3': 'ruta/a/imagen3.png',
+    // Agrega más texturas según sea necesario
+};
 
 // Evento de selección
 controller.addEventListener('selectstart', () => {
