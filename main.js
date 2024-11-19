@@ -258,7 +258,7 @@ controller.addEventListener('selectstart', () => {
                 'Pintura David con la cabeza de Goliat':'Pinturas[1]/Pinturas/Vertical/Textos/David con la cabeza de Goliat.png',
                 'Pintura El caminante sobre las nubes':'Pinturas[1]/Pinturas/Vertical/Textos/El caminante sobre el mar de nubes.png',
 
-                'Pintura Hombre de vitruvio': 'Pinturas[1]/Pinturas/Vertical/Textos/Hombre de vitruvio.png',
+                'Pintura Hombre de vitruvio': 'Pinturas[1]/Pinturas/Vertical/Textos/Hombre de Vitruvio.png',
                 'Pintura Judith y sus doncellas':'Pinturas[1]/Pinturas/Vertical/Textos/Judith y sus doncellas.png',
                 'Pintura La duquesa fea':'Pinturas[1]/Pinturas/Vertical/Textos/La duquesa fea.png',
                 'Pintura La joven de la perla':'Pinturas[1]/Pinturas/Vertical/Textos/La joven de la perla.png',
