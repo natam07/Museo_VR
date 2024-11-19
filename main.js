@@ -210,8 +210,7 @@ const lineMaterial = new THREE.LineBasicMaterial({ color: 0xff0000 });
 const line = new THREE.Line(lineGeometry, lineMaterial);
 line.name = 'line';
 line.scale.z = 20; // Longitud del rayo
-line.add(camera);
-controller.add(line)
+controller.add(line);
 
 // Evento de selección
 controller.addEventListener('selectstart', () => {
